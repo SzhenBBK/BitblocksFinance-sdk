@@ -17,6 +17,7 @@ var ChainId;
 (function (ChainId) {
   ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
   ChainId[ChainId["POLYGON"] = 137] = "POLYGON";
+  ChainId[ChainId["MANTA"] = 169] = "MANTA";
   ChainId[ChainId["TESTNET"] = 97] = "TESTNET";
 })(ChainId || (ChainId = {}));
 
@@ -35,10 +36,10 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x65b3CC7a7cB167221266Fc93884717dE2DBd074e';
-var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[ChainId.POLYGON] = '0xFF89048FC50F848cf6B99F3629c16Ed6332785a5', _FACTORY_ADDRESS_MAP[ChainId.TESTNET] = '0x6725f303b657a9451d8ba641348b6761a6cc7a17', _FACTORY_ADDRESS_MAP);
-var INIT_CODE_HASH = '0xb056681b9b055cda84fe24a9c9a234981f81ca911e843814a6fee1f606fe512f';
-var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[ChainId.POLYGON] = '0xff56c99ed54f2ce6a32a074890918c675b1a95ce2405d3bd35b5c81011962874', _INIT_CODE_HASH_MAP[ChainId.TESTNET] = '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66', _INIT_CODE_HASH_MAP);
+var FACTORY_ADDRESS = '0x223478B4F4708BE3A7daecEDE658836f86BaDBEA';
+var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[ChainId.MAINNET] = '0x65b3CC7a7cB167221266Fc93884717dE2DBd074e', _FACTORY_ADDRESS_MAP[ChainId.POLYGON] = '0xFF89048FC50F848cf6B99F3629c16Ed6332785a5', _FACTORY_ADDRESS_MAP[ChainId.MANTA] = '0x223478B4F4708BE3A7daecEDE658836f86BaDBEA', _FACTORY_ADDRESS_MAP[ChainId.TESTNET] = '0x6725f303b657a9451d8ba641348b6761a6cc7a17', _FACTORY_ADDRESS_MAP);
+var INIT_CODE_HASH = '0xd817f027782c0b471ffe235a585c1e3940241423d7f34774608229038c61251b';
+var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[ChainId.MAINNET] = '0xb056681b9b055cda84fe24a9c9a234981f81ca911e843814a6fee1f606fe512f', _INIT_CODE_HASH_MAP[ChainId.POLYGON] = '0xff56c99ed54f2ce6a32a074890918c675b1a95ce2405d3bd35b5c81011962874', _INIT_CODE_HASH_MAP[ChainId.MANTA] = '0xd817f027782c0b471ffe235a585c1e3940241423d7f34774608229038c61251b', _INIT_CODE_HASH_MAP[ChainId.TESTNET] = '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66', _INIT_CODE_HASH_MAP);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -438,7 +439,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[ChainId.POLYGON] = /*#__PURE__*/new Token(ChainId.POLYGON, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC', 'https://polygon.technology/'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[ChainId.POLYGON] = /*#__PURE__*/new Token(ChainId.POLYGON, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC', 'https://polygon.technology/'), _WETH[ChainId.MANTA] = /*#__PURE__*/new Token(ChainId.MANTA, '0x0Dc808adcE2099A9F62AA87D9670745AbA741746', 18, 'WETH', 'Wrapped ETH', 'https://pacific.manta.network/'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

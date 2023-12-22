@@ -83,6 +83,15 @@ export const WETH = {
     'Wrapped MATIC',
     'https://polygon.technology/'
   ),
+
+  [ChainId.MANTA]: new Token(
+    ChainId.MANTA,
+    '0x0Dc808adcE2099A9F62AA87D9670745AbA741746',
+    18,
+    'WETH',
+    'Wrapped ETH',
+    'https://pacific.manta.network/'
+  ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
     '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
